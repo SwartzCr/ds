@@ -1,0 +1,5 @@
+<ul class=entries>
+{% for entry in entries %}
+{% if (loop.index - 1) is divisibleby 3 %}<br>{% endif %}
+<img src={{ url_for('static', filename="{0}".format(entry)) }} width=33%>
+{% endfor %}
