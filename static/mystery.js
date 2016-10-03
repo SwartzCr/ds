@@ -1,8 +1,8 @@
-var img = document.getElementById("img");
-var node = document.createElement("IMG");
-node.src = "https://alinkisnotenabled.com/spacer.gif";
+var img = document.getElementById("link");
 var fnx = function( event ) {
     event.preventDefault();
-    document.getElementById("division").appendChild(node);
-    window.location = "https://danielle.soy/puzzle2";};
+    var node = document.createElement("IMG");
+    node.addEventListener("load", function() { window.location = "https://danielle.soy/puzzle2";});
+    node.src = "https://alinkisnotenabled.com/spacer.gif";
+    document.getElementById("division").appendChild(node);};
 img.addEventListener("click", fnx);
